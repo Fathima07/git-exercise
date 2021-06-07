@@ -16,7 +16,7 @@
   \*********************/
 /***/ (() => {
 
-eval("\r\nlet cel = document.getElementById(\"cel\");\r\nlet fer = document.getElementById(\"fer\");\r\nlet compute = (celValue) => {\r\n    var outResult = Number(celValue * 1.8 + 32);\r\n    fer.value = outResult.toString();\r\n};\r\ncel.addEventListener(\"input\", (value) => {\r\n    compute(Number(cel.value)); //convert to number and send to compute function\r\n});\r\n\n\n//# sourceURL=webpack://04-addition/./src/main.ts?");
+eval("\r\nlet cel = document.getElementById(\"cel\");\r\nlet fer = document.getElementById(\"fer\");\r\nlet celToFer = (celValue) => {\r\n    var outResult = Number(celValue * 1.8 + 32);\r\n    fer.value = outResult.toString();\r\n};\r\nlet ferToCel = (celValue) => {\r\n    var outResult = Number((celValue - 32) * (5 / 9));\r\n    cel.value = outResult.toString();\r\n};\r\ncel.addEventListener(\"input\", (value) => {\r\n    celToFer(Number(cel.value)); //convert to number and send to compute function\r\n});\r\nfer.addEventListener(\"input\", (value) => {\r\n    ferToCel(Number(fer.value)); //convert to number and send to compute function\r\n});\r\n\n\n//# sourceURL=webpack://04-addition/./src/main.ts?");
 
 /***/ })
 
