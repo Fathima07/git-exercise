@@ -1,7 +1,7 @@
 {
-	"name": "04-addition",
+	"name": "weather-calculator",
 	"version": "1.0.0",
-	"author": "Matthieu Bovel",
+	"author": "Fathima Almas",
 	"private": true,
 	"scripts": {
 		"build": "webpack",
