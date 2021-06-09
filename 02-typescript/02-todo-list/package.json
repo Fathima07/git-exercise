@@ -1,0 +1,16 @@
+{
+	"name": "feature-fix",
+	"version": "1.0.0",
+	"author": "Fathima Almas",
+	"private": true,
+	"scripts": {
+		"build": "webpack",
+		"build:watch": "webpack --watch"
+	},
+	"devDependencies": {
+		"ts-loader": "^9.2.3",
+		"webpack": "^5.38.1",
+		"webpack-cli": "^4.7.0",
+		"typescript": "^4.3.2"
+	}
+}
