@@ -67,10 +67,10 @@ const addTodo =()=>{
     
   });
   
-  listTodo();
+  listTodo(false);
 }
 
-const listTodo=(filter?:boolean)=>{
+const listTodo=(filter:boolean)=>{
   crtUl.innerHTML = '';
   for(const todo of toDos.sort((a, b) => a.title.localeCompare(b.title))) {
     if((filter && !todo.done)){
