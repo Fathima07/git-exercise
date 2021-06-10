@@ -42,7 +42,6 @@ const toDos: State = [
 
 const crtToDo = () => {
   getDiv.innerHTML= "";
- 
   crtInput.setAttribute("type","text");
   crtInput.innerHTML= " ";
   getDiv.appendChild(crtInput);
@@ -54,8 +53,8 @@ const crtToDo = () => {
   crtButton.innerText ="Add";
   getDiv.appendChild(crtButton)
   crtButton.addEventListener("click",addTodo);
-  crtFilter?.addEventListener("click",function(){
-    listTodo(crtFilter?.checked);
+  crtFilter.addEventListener("click",function(){
+    listTodo(crtFilter.checked);
   });
 }
 
@@ -93,7 +92,7 @@ const listTodo=(filter?:boolean)=>{
     crtLi.appendChild(crtSpan);
     crtUl.appendChild(crtLi);
 
-    // crtLi.textContent = "Title:" + todo.title;
+    
      
   }
 }
