@@ -1,0 +1,45 @@
+.admin-badge {
+  background: #014d2d;
+  border-radius: 40%;
+  color: #fff;
+  font-size: 12px;
+  padding: 7px;
+}
+
+body {
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.section-one {
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.section-one article {
+  width: 50%;
+}
+
+.section-one article img {
+  border-radius: 50%;
+}
+
+.section-two {
+  display: flex;
+  width: 70%;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.section-two article {
+  width: 25%;
+}
+
+.section-two article img {
+  border-radius: 20%;
+}
+
+main {
+  background-color: #344966;
+}
