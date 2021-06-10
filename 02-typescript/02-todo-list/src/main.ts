@@ -1,10 +1,18 @@
 const getDiv = document.getElementById("to-do");
 const crtUl = document.createElement("ul");
 const crtInput = document.createElement("input");
-const crtFilter = <HTMLInputElement>document.getElementById("filter-todo");
+const crtFilter =document.getElementById("filter-todo");
+
+if(!(crtFilter instanceof HTMLInputElement)) {
+  throw new Error("No input with id 'filter-todo' found!");
+}
+
+
+
 if(!(getDiv instanceof HTMLDivElement)) {
   throw new Error("No div with id 'to-do' found!");
 }
+
 
 
 type State = {
@@ -53,10 +61,13 @@ const crtToDo = () => {
 
 
 const addTodo =()=>{
+  
   toDos.push({
     'title':crtInput.value,
-    'done':false
+    'done':false,
+    
   });
+  
   listTodo();
 }
 
