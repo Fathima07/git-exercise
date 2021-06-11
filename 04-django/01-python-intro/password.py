@@ -14,9 +14,9 @@ def getRandomPassword():
         print(password)
     
 def isStrongPassword(password):
-    strong      =   False;
-    oneLetter   =   False;
-    onespecial  =   False;
+    strong      =   False
+    oneLetter   =   False
+    onespecial  =   False
     if password[0] not in letters:
         return False
     for letter in password:
