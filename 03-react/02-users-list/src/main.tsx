@@ -21,7 +21,7 @@ interface UserInfo {
 };
 
 interface UserProps {
-	List: UserInfo
+	User: UserInfo
 }
 
 const users = [
@@ -248,17 +248,17 @@ const users = [
 ];
 
 
-function List(props: UserProps) {
+function User(props: UserProps) {
 	return (
 		<article>
-			<h1>id: {props.List.id}</h1>
-			<img src={props.List.avatar} />
-			<p>First Name: {props.List.first_name}</p>
-			<p>Last Name: {props.List.last_name}</p>
-			<p>Age: {props.List.age}</p>
-			<p>City: {props.List.city}</p>
-			<p>Ip: {props.List.ip}</p>
-			<p>{props.List.isAdmin ? <span className="admin-badge">Admin</span> : ''}</p>
+			<h1>id: {props.User.id}</h1>
+			<img src={props.User.avatar} />
+			<p>First Name: {props.User.first_name}</p>
+			<p>Last Name: {props.User.last_name}</p>
+			<p>Age: {props.User.age}</p>
+			<p>City: {props.User.city}</p>
+			<p>Ip: {props.User.ip}</p>
+			<p>{props.User.isAdmin ? <span className="admin-badge">Admin</span> : ''}</p>
 		</article>
 	);
 };
@@ -266,10 +266,10 @@ function List(props: UserProps) {
 function App() {
 	return <main style={{ padding: "30px", textAlign: "center" }}>
 		<h2 style={{ backgroundColor: "#145C9E", padding: "20px", textAlign: "center" }}> Person up to 30 years old</h2> <section className="section-one">{
-			users.filter(person => person.age < 30).map(user => <List List={user} />)
+			users.filter(person => person.age < 30).map(user => <User User={user} />)
 		}</section>
 		<h2 style={{ backgroundColor: "#2B193D", padding: "20px", textAlign: "center", color: "#FFF" }}>Person Over 30 year old</h2> <section className="section-two">{
-			users.filter(person => person.age > 30).map(user => <List List={user} />)
+			users.filter(person => person.age > 30).map(user => <User User={user} />)
 		}</section>
 
 
