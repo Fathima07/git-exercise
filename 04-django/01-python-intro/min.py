@@ -1,5 +1,5 @@
 def min(array):
-   
+    min_number = None
     for i in array:
         if min_number is None:
             min_number = i
