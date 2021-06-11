@@ -20,7 +20,7 @@ interface UserInfo {
 
 };
 
-interface UserProps {
+interface userProps {
 	User: UserInfo
 }
 
@@ -248,7 +248,7 @@ const users = [
 ];
 
 
-function User(props: UserProps) {
+function User(props: userProps) {
 	return (
 		<article>
 			<h1>id: {props.User.id}</h1>
