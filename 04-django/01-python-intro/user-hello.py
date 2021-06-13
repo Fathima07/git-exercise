@@ -21,4 +21,8 @@ users = [
     }
 ]
 
+def hello_users(userlist):
+    for user in userlist:
+        print('Hello I am '+user['first_name']+' '+user['last_name']+' and i am ' +str(user['age'])+' years old' )
 
+hello_users(users)
