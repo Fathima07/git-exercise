@@ -49,7 +49,7 @@ const crtToDo = () => {
   getDiv.appendChild(crtUl);
   
   let crtButton = document.createElement('button');
-  listTodo();
+  listTodo(false);
   crtButton.innerText ="Add";
   getDiv.appendChild(crtButton)
   crtButton.addEventListener("click",addTodo);
