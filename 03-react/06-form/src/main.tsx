@@ -41,6 +41,7 @@ const App = () => {
 		> <label htmlFor="">First Name:</label>
 			<input
 				type="text"
+
 				value={user.firstName}
 				
 				onChange={(e) => {
@@ -50,7 +51,6 @@ const App = () => {
 			<label htmlFor="">Last Name:</label>
 			<input
 				type="text"
-				
 				value={user.lastName}
 				onChange={(e) => {
 					setUser({...user,lastName:e.target.value});
@@ -59,7 +59,6 @@ const App = () => {
 			<label htmlFor="">Age:</label>
 			<input
 				type="number"
-				
 				value={user.age}
 				onChange={(e) => {
 					setUser({...user,age:e.target.value});
