@@ -11,14 +11,14 @@ if (!(appDiv instanceof HTMLDivElement)) {
 interface userInfo {
 	firstName: string;
 	lastName: string;
-	age: number;
+	age: string;
 }
 
 const App = () => {
 	const [user, setUser] = React.useState<userInfo>({
 		firstName: "",
 		lastName: "",
-		age: 0,
+		age: "",
 	});
 	const [updated,updateForm]=React.useState(true);
 
@@ -41,28 +41,27 @@ const App = () => {
 		> <label htmlFor="">First Name:</label>
 			<input
 				type="text"
-				//value={user.firstName}
+
+				value={user.firstName}
 				
 				onChange={(e) => {
-					user.firstName	=	e.target.value;
+					setUser({...user,firstName:e.target.value});
 				}}
 			/> <br />
 			<label htmlFor="">Last Name:</label>
 			<input
 				type="text"
-				
-				//value={user.lastName}
+				value={user.lastName}
 				onChange={(e) => {
-					user.lastName	=	e.target.value;
+					setUser({...user,lastName:e.target.value});
 				}}
 			/> <br />
 			<label htmlFor="">Age:</label>
 			<input
 				type="number"
-				
-				//value={user.age}
+				value={user.age}
 				onChange={(e) => {
-					user.age	=	Number(e.target.value);
+					setUser({...user,age:e.target.value});
 				}}
 			/> <br />
 			<input type="submit" value="Send my data" onClick={()=>submitForm(true)}/>
