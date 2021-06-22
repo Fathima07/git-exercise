@@ -18,18 +18,6 @@ if (!(appDiv instanceof HTMLDivElement)) {
 export default function App() {
 	return (
 		<HashRouter>
-			<nav>
-				<ul>
-					<li>
-						<Link to="/"> Contributors</Link>
-					</li>
-					
-					<li>
-						<Link to="/users/mbovel">Details</Link>
-					</li>
-					
-				</ul>
-			</nav>
 
 			<Switch>
 				

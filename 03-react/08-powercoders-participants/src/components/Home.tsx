@@ -38,14 +38,14 @@ export default function Home() {
 		<main>
 			{
 				users ? users.map((use): JSX.Element => {
-					return <div className="home">
-						<p key={use.id}></p>
-						<p className="link"><Link  to={'/users/' + use.login} >{use.login}</Link>
+					return <article key={use.id} className="home">
+						<p ></p>
+						<p className="link"><Link  to={'/users/' + use.login}><h3>{use.login}</h3><img src={use.avatar_url} /></Link>
 						</p>
 					
-						<p className="image"><img src={use.avatar_url} /></p>
 						
-					</div>
+						
+					</article>
 				}) : 'there is no Participants'
 			}
 		</main>
