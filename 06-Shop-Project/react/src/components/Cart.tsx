@@ -13,7 +13,7 @@ type DogCeoResponse =
 	  }
 	| null;
 
-export default function Men() {
+export default function Cart() {
 	const [response, setResponse] =
 		React.useState<DogCeoResponse>(null);
 

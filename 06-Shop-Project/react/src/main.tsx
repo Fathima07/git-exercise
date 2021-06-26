@@ -6,9 +6,10 @@ import {
 	Route,
 } from "react-router-dom";
 import * as ReactDOM from "react-dom";
-import Men from "./components/Men";
+import Cart from "./components/Cart";
 import Home from "./components/Home";
-import Category from "./components/category";
+import Details from "./components/Details";
+import ProductDetails from "./components/ProductDetails";
 
 const appDiv = document.getElementById("app");
 
@@ -22,25 +23,24 @@ export default function App() {
 			<nav>
 				<ul>
 					<li>
-						<Link to="/">❤️ Home</Link>
+						<Link to="/"> Home</Link>
+					</li>
+					
+					<li>
+						<Link to="/cart"> Men</Link>
 					</li>
 					<li>
-						<Link to="/women">🐱 Women</Link>
-					</li>
-					<li>
-						<Link to="/Men">🐶 Men</Link>
-					</li>
-					<li>
-						<Link to="/Category">🐶 Category</Link>
+						<Link to="/detail"> Details</Link>
 					</li>
 				</ul>
 			</nav>
 
 			<Switch>
 				
-				<Route path="/dogs/:breed" children={<Men />} />
-				<Route exact path="/" children={<Home />} />
-				<Route path="/" children={<Category/>}/>
+				<Route path="/cart" children={<Cart />} />
+				<Route exact  path="/" children={<Home />} />
+				<Route path="/product/:product" children={<ProductDetails />}/>
+				
 			</Switch>
 		</HashRouter>
 	);
